@@ -262,7 +262,7 @@ export default function Home() {
     {
       title: "E-commerce Platform",
       description: "A full-stack e-commerce solution with React, Node.js, and Stripe integration that handles 10,000+ monthly transactions.",
-      image: "/project1.jpg",
+      image: "/project1.svg",
       technologies: ["React", "Node.js", "MongoDB"],
       github: "https://github.com/johndoe/ecommerce",
       demo: "https://ecommerce-demo.example.com"
@@ -270,7 +270,7 @@ export default function Home() {
     {
       title: "SaaS Analytics Dashboard",
       description: "An analytics dashboard for SaaS businesses with real-time data visualization and custom reporting features.",
-      image: "/project2.jpg",
+      image: "/project2.svg",
       technologies: ["Next.js", "TypeScript", "D3.js"],
       github: "https://github.com/johndoe/saas-dashboard",
       demo: "https://saas-dashboard.example.com"
@@ -278,7 +278,7 @@ export default function Home() {
     {
       title: "AI Chat Application",
       description: "A real-time chat application with AI-powered responses and language translation supporting 20+ languages.",
-      image: "/project3.jpg",
+      image: "/project3.svg",
       technologies: ["React", "Socket.io", "OpenAI API"],
       github: "https://github.com/johndoe/ai-chat",
       demo: "https://ai-chat.example.com"
@@ -327,7 +327,7 @@ export default function Home() {
             <Toolbar sx={{ justifyContent: "space-between" }}>
               {/* Your name/logo */}
               <Typography variant="h6" fontWeight="bold" color="text.primary">
-                <Box component="span" sx={{ color: theme.palette.primary.main }}>John</Box>Doe
+                <Box component="span" sx={{ color: theme.palette.primary.main }}>John</Box> Doe
               </Typography>
               
               <Box sx={{ display: 'flex', alignItems: 'center' }}>
@@ -663,6 +663,18 @@ export default function Home() {
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
               {projectsData.map((project, index) => (
                 <Card key={index} sx={styles.projectCard} elevation={darkMode ? 1 : 2}>
+                  {/* Project thumbnail (Bootstrap) */}
+                  {project.image && (
+                    <Box sx={{ textAlign: 'center', pt: 2 }}>
+                      <img
+                        src={project.image}
+                        alt={`${project.title} thumbnail`}
+                        className="img-fluid img-thumbnail"
+                        style={{ maxWidth: 240, height: 'auto', margin: '0 auto' }}
+                      />
+                    </Box>
+                  )}
+
                   {/* Card content - title, description, technologies */}
                   <CardContent sx={{ flexGrow: 1 }}>
                     <Typography variant="h5" component="h3" fontWeight="bold" gutterBottom>
