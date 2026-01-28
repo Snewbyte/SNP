@@ -440,7 +440,7 @@ export default function Home() {
                   ml: 2,
                 }}>
                   <CustomButton 
-                    label="Get Started" 
+                    label="Cat Facts" 
                     onClick={() => scrollToSection('contact')}
                   />
                   <IconButton 
