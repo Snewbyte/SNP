@@ -442,6 +442,7 @@ export default function Home() {
                   <CustomButton 
                     label="Cat Facts" 
                     onClick={() => scrollToSection('contact')}
+                    darkMode={darkMode}
                   />
                   <IconButton 
                     onClick={() => setDarkMode(!darkMode)} 
