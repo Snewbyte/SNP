@@ -25,6 +25,7 @@ import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa"; // Social me
 import { HiOutlineMail } from "react-icons/hi"; // Email icon
 import { IoMoon, IoSunny } from "react-icons/io5"; // Theme toggle icons
 import Image from "next/image"; // Next.js optimized Image component
+import CustomButton from "@/components/Button"; // Custom button component
 import {
   AppBar, // Top navigation bar
   Box, // Basic layout container
@@ -438,6 +439,11 @@ export default function Home() {
                   alignItems: 'center',
                   ml: 2,
                 }}>
+                  <CustomButton 
+                    label="Cat Facts" 
+                    onClick={() => scrollToSection('contact')}
+                    darkMode={darkMode}
+                  />
                   <IconButton 
                     onClick={() => setDarkMode(!darkMode)} 
                     sx={{ ml: 1 }}
